@@ -1,0 +1,25 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <%=Resources.Resource.Language %>:
+    <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ChangeLanguage">
+        <asp:ListItem Text="English" Value="en-us" />
+        <asp:ListItem Text="Hindi" Value="hi-in" />
+        <asp:ListItem Text="Dutch" Value="nl-nl" />
+    </asp:DropDownList>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
